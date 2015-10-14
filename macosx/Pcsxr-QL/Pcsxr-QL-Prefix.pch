@@ -1,0 +1,16 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#include "MyQuickLook.h"
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+	#import "PcsxrMemoryObject.h"
+#endif
+
+#ifndef NS_DESIGNATED_INITIALIZER
+#define NS_DESIGNATED_INITIALIZER
+#endif
