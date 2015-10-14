@@ -1355,6 +1355,7 @@ BOOL CALLBACK ConfigureCpuDlgProc(HWND hW, UINT uMsg, WPARAM wParam, LPARAM lPar
 			Button_SetText(GetDlgItem(hW,IDC_HIDECURSOR), _("Hide cursor"));
 			Button_SetText(GetDlgItem(hW,IDC_SAVEWINDOWPOS), _("Save window position"));
 			Button_SetText(GetDlgItem(hW,IDC_HACKFIX), _("Compatibility hacks (Raystorm/VH-D/MML/Cart World/...)"));
+			Button_SetText(GetDlgItem(hW,IDC_MEMHACK), _("Memory hack for Wipeout"));
 
 			Static_SetText(GetDlgItem(hW,IDC_MISCOPT), _("Options"));
 			Static_SetText(GetDlgItem(hW,IDC_SELPSX),  _("Psx System Type"));
@@ -1375,6 +1376,7 @@ BOOL CALLBACK ConfigureCpuDlgProc(HWND hW, UINT uMsg, WPARAM wParam, LPARAM lPar
 			Button_SetCheck(GetDlgItem(hW,IDC_HIDECURSOR), Config.HideCursor);
 			Button_SetCheck(GetDlgItem(hW,IDC_SAVEWINDOWPOS), Config.SaveWindowPos);
 			Button_SetCheck(GetDlgItem(hW,IDC_HACKFIX), Config.HackFix);
+			Button_SetCheck(GetDlgItem(hW,IDC_MEMHACK), Config.MemHack);
 
 			ComboBox_AddString(GetDlgItem(hW,IDC_PSXTYPES), "NTSC");
 			ComboBox_AddString(GetDlgItem(hW,IDC_PSXTYPES), "PAL");
@@ -1422,7 +1424,8 @@ BOOL CALLBACK ConfigureCpuDlgProc(HWND hW, UINT uMsg, WPARAM wParam, LPARAM lPar
 					Config.Widescreen = Button_GetCheck(GetDlgItem(hW,IDC_WIDESCREEN));
 					Config.HideCursor = Button_GetCheck(GetDlgItem(hW,IDC_HIDECURSOR));
 					Config.SaveWindowPos = Button_GetCheck(GetDlgItem(hW,IDC_SAVEWINDOWPOS));
-					Config.HackFix = Button_GetCheck(GetDlgItem(hW, IDC_HACKFIX));
+					Config.HackFix = Button_GetCheck(GetDlgItem(hW,IDC_HACKFIX));
+					Config.MemHack = Button_GetCheck(GetDlgItem(hW,IDC_MEMHACK));
 
 					if(Config.SaveWindowPos) {
 						GetWindowRect(gApp.hWnd, &rect);
