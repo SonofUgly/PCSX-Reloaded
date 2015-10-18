@@ -1355,7 +1355,7 @@ BOOL CALLBACK ConfigureCpuDlgProc(HWND hW, UINT uMsg, WPARAM wParam, LPARAM lPar
 			Button_SetText(GetDlgItem(hW,IDC_HIDECURSOR), _("Hide cursor"));
 			Button_SetText(GetDlgItem(hW,IDC_SAVEWINDOWPOS), _("Save window position"));
 			Button_SetText(GetDlgItem(hW,IDC_HACKFIX), _("Compatibility hacks (Raystorm/VH-D/MML/Cart World/...)"));
-			Button_SetText(GetDlgItem(hW,IDC_MEMHACK), _("Memory hack for Wipeout"));
+			Button_SetText(GetDlgItem(hW,IDC_MEMHACK), _("Wipeout memory hack (causes slowdowns in many games)"));
 
 			Static_SetText(GetDlgItem(hW,IDC_MISCOPT), _("Options"));
 			Static_SetText(GetDlgItem(hW,IDC_SELPSX),  _("Psx System Type"));

@@ -131,7 +131,8 @@ BEGIN
     CONTROL         "Save window position",IDC_SAVEWINDOWPOS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,210,205,10
     CONTROL         "Compatibility hacks (Raystorm/VH-D/MML/Cart World/...)",IDC_HACKFIX,
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,225,205,10
-	CONTROL         "Memory hack for Wipeout", IDC_MEMHACK,"Button", BS_AUTOCHECKBOX | WS_TABSTOP, 10, 240, 205, 10
+	CONTROL         "Wipeout memory hack (causes slowdowns in many games)", IDC_MEMHACK,
+					"Button", BS_AUTOCHECKBOX | WS_TABSTOP, 10, 240, 205, 10
 END
 
 IDD_NETPLAY DIALOG 0, 0, 165, 95
