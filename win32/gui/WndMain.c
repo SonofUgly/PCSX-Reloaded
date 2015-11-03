@@ -1356,6 +1356,7 @@ BOOL CALLBACK ConfigureCpuDlgProc(HWND hW, UINT uMsg, WPARAM wParam, LPARAM lPar
 			Button_SetText(GetDlgItem(hW,IDC_SAVEWINDOWPOS), _("Save window position"));
 			Button_SetText(GetDlgItem(hW,IDC_HACKFIX), _("Compatibility hacks (Raystorm/VH-D/MML/Cart World/...)"));
 			Button_SetText(GetDlgItem(hW,IDC_MEMHACK), _("Wipeout memory hack (causes slowdowns in many games)"));
+			Button_SetText(GetDlgItem(hW,IDC_NOHACK), _("Disable all hacks"));
 
 			Static_SetText(GetDlgItem(hW,IDC_MISCOPT), _("Options"));
 			Static_SetText(GetDlgItem(hW,IDC_SELPSX),  _("Psx System Type"));
@@ -1377,6 +1378,7 @@ BOOL CALLBACK ConfigureCpuDlgProc(HWND hW, UINT uMsg, WPARAM wParam, LPARAM lPar
 			Button_SetCheck(GetDlgItem(hW,IDC_SAVEWINDOWPOS), Config.SaveWindowPos);
 			Button_SetCheck(GetDlgItem(hW,IDC_HACKFIX), Config.HackFix);
 			Button_SetCheck(GetDlgItem(hW,IDC_MEMHACK), Config.MemHack);
+			Button_SetCheck(GetDlgItem(hW,IDC_NOHACK), Config.NoHack);
 
 			ComboBox_AddString(GetDlgItem(hW,IDC_PSXTYPES), "NTSC");
 			ComboBox_AddString(GetDlgItem(hW,IDC_PSXTYPES), "PAL");
@@ -1386,6 +1388,33 @@ BOOL CALLBACK ConfigureCpuDlgProc(HWND hW, UINT uMsg, WPARAM wParam, LPARAM lPar
 				Config.Debug = 0;
 				Button_SetCheck(GetDlgItem(hW, IDC_DEBUG), FALSE);
 				EnableWindow(GetDlgItem(hW, IDC_DEBUG), FALSE);
+			}
+
+			if (Config.NoHack == 1) {
+				Config.Xa = 0;
+				Config.Mdec = 0;
+				Config.Cdda = 0;
+				Config.RCntFix = 0;
+				Config.VSyncWA = 0;
+				Config.Widescreen = 0;
+				Config.HackFix = 0;
+				Config.MemHack = 0;
+				Button_SetCheck(GetDlgItem(hW, IDC_XA), FALSE);
+				Button_SetCheck(GetDlgItem(hW, IDC_MDEC), FALSE);
+				Button_SetCheck(GetDlgItem(hW, IDC_CDDA), FALSE);
+				Button_SetCheck(GetDlgItem(hW, IDC_RCNTFIX), FALSE);
+				Button_SetCheck(GetDlgItem(hW, IDC_VSYNCWA), FALSE);
+				Button_SetCheck(GetDlgItem(hW, IDC_WIDESCREEN), FALSE);
+				Button_SetCheck(GetDlgItem(hW, IDC_HACKFIX), FALSE);
+				Button_SetCheck(GetDlgItem(hW, IDC_MEMHACK), FALSE);
+				EnableWindow(GetDlgItem(hW, IDC_XA), FALSE);
+				EnableWindow(GetDlgItem(hW, IDC_MDEC), FALSE);
+				EnableWindow(GetDlgItem(hW, IDC_CDDA), FALSE);
+				EnableWindow(GetDlgItem(hW, IDC_RCNTFIX), FALSE);
+				EnableWindow(GetDlgItem(hW, IDC_VSYNCWA), FALSE);
+				EnableWindow(GetDlgItem(hW, IDC_WIDESCREEN), FALSE);
+				EnableWindow(GetDlgItem(hW, IDC_HACKFIX), FALSE);
+				EnableWindow(GetDlgItem(hW, IDC_MEMHACK), FALSE);
 			}
 
 			EnableWindow(GetDlgItem(hW,IDC_PSXTYPES), !Config.PsxAuto);
@@ -1426,6 +1455,7 @@ BOOL CALLBACK ConfigureCpuDlgProc(HWND hW, UINT uMsg, WPARAM wParam, LPARAM lPar
 					Config.SaveWindowPos = Button_GetCheck(GetDlgItem(hW,IDC_SAVEWINDOWPOS));
 					Config.HackFix = Button_GetCheck(GetDlgItem(hW,IDC_HACKFIX));
 					Config.MemHack = Button_GetCheck(GetDlgItem(hW,IDC_MEMHACK));
+					Config.NoHack = Button_GetCheck(GetDlgItem(hW, IDC_NOHACK));
 
 					if(Config.SaveWindowPos) {
 						GetWindowRect(gApp.hWnd, &rect);
@@ -1454,6 +1484,29 @@ BOOL CALLBACK ConfigureCpuDlgProc(HWND hW, UINT uMsg, WPARAM wParam, LPARAM lPar
 					} else {
 						Button_SetCheck(GetDlgItem(hW,IDC_DEBUG), FALSE);
 						EnableWindow(GetDlgItem(hW,IDC_DEBUG), FALSE);
+					}
+					break;
+
+				case IDC_NOHACK:
+					if (Button_GetCheck(GetDlgItem(hW, IDC_NOHACK))) {
+						EnableWindow(GetDlgItem(hW, IDC_XA), FALSE);
+						EnableWindow(GetDlgItem(hW, IDC_MDEC), FALSE);
+						EnableWindow(GetDlgItem(hW, IDC_CDDA), FALSE);
+						EnableWindow(GetDlgItem(hW, IDC_RCNTFIX), FALSE);
+						EnableWindow(GetDlgItem(hW, IDC_VSYNCWA), FALSE);
+						EnableWindow(GetDlgItem(hW, IDC_WIDESCREEN), FALSE);
+						EnableWindow(GetDlgItem(hW, IDC_HACKFIX), FALSE);
+						EnableWindow(GetDlgItem(hW, IDC_MEMHACK), FALSE);
+					}
+					else {
+						EnableWindow(GetDlgItem(hW, IDC_XA), TRUE);
+						EnableWindow(GetDlgItem(hW, IDC_MDEC), TRUE);
+						EnableWindow(GetDlgItem(hW, IDC_CDDA), TRUE);
+						EnableWindow(GetDlgItem(hW, IDC_RCNTFIX), TRUE);
+						EnableWindow(GetDlgItem(hW, IDC_VSYNCWA), TRUE);
+						EnableWindow(GetDlgItem(hW, IDC_WIDESCREEN), TRUE);
+						EnableWindow(GetDlgItem(hW, IDC_HACKFIX), TRUE);
+						EnableWindow(GetDlgItem(hW, IDC_MEMHACK), TRUE);
 					}
 					break;
 
@@ -1769,12 +1822,12 @@ void CreateMainWindow(int nCmdShow) {
 	RegisterClass(&wc);
 
 	hWnd = CreateWindow("PCSXR Main",
-						"PCSXR",
+						"PCSX-Reloaded",
 						WS_CAPTION | WS_POPUPWINDOW | WS_MINIMIZEBOX,
 						CW_USEDEFAULT,
 						0,
-						360,
-						248,
+						354,
+						223,
 						NULL,
 						NULL,
 						gApp.hInstance,

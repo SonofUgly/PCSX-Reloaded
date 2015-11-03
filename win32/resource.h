@@ -110,6 +110,7 @@
 #define IDC_MISCOPT                     1032
 #define IDC_ASMCHECK19                  1033
 #define IDC_GRAPHICS                    1033
+#define IDC_MISCOPT2                    1033
 #define IDC_CP021                       1034
 #define IDC_ASMCHECK20                  1034
 #define IDC_FIRSTCONTROLLER             1034
@@ -307,6 +308,7 @@
 #define IDC_SAVEWINDOWPOS               1266
 #define IDC_HACKFIX                     1267
 #define IDC_MEMHACK                     1268
+#define IDC_NOHACK                      1269
 #define ID_FILE_EXIT                    40001
 #define ID_HELP_ABOUT                   40002
 #define ID_FILE_RUN_CD                  40003
@@ -359,7 +361,7 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        116
+#define _APS_NEXT_RESOURCE_VALUE        117
 #define _APS_NEXT_COMMAND_VALUE         40047
 #define _APS_NEXT_CONTROL_VALUE         1054
 #define _APS_NEXT_SYMED_VALUE           102

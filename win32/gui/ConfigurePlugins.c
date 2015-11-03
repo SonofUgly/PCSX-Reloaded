@@ -88,6 +88,7 @@ int LoadConfig() {
 	QueryKeyV("WindowPosY",  Conf->WindowPos[1]);
 	QueryKeyV("HackFix", Conf->HackFix);
 	QueryKeyV("MemHack", Conf->MemHack);
+	QueryKeyV("NoHack", Conf->NoHack);
 
 	QueryKeyV("Cpu",      Conf->Cpu);
 	QueryKeyV("PsxType",  Conf->PsxType);
@@ -147,6 +148,7 @@ void SaveConfig() {
 	SetKeyV("WindowPosY",  Conf->WindowPos[1]);
 	SetKeyV("HackFix", Conf->HackFix);
 	SetKeyV("MemHack", Conf->MemHack);
+	SetKeyV("NoHack", Conf->NoHack);
 
 	SetKeyV("Cpu",     Conf->Cpu);
 	SetKeyV("PsxType", Conf->PsxType);
