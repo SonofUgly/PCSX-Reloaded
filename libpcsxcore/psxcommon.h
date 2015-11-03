@@ -163,6 +163,7 @@ typedef struct {
 	u32 AltSpeed2;
 	u8 HackFix;
 	u8 MemHack;
+	u8 NoHack;
 #ifdef _WIN32
 	char Lang[256];
 #endif

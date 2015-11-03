@@ -1390,7 +1390,7 @@ BOOL CALLBACK ConfigureCpuDlgProc(HWND hW, UINT uMsg, WPARAM wParam, LPARAM lPar
 				EnableWindow(GetDlgItem(hW, IDC_DEBUG), FALSE);
 			}
 
-			if (Config.NoHack == 1) {
+			if (Config.NoHack) {
 				Config.Xa = 0;
 				Config.Mdec = 0;
 				Config.Cdda = 0;
@@ -1497,6 +1497,14 @@ BOOL CALLBACK ConfigureCpuDlgProc(HWND hW, UINT uMsg, WPARAM wParam, LPARAM lPar
 						EnableWindow(GetDlgItem(hW, IDC_WIDESCREEN), FALSE);
 						EnableWindow(GetDlgItem(hW, IDC_HACKFIX), FALSE);
 						EnableWindow(GetDlgItem(hW, IDC_MEMHACK), FALSE);
+						Button_SetCheck(GetDlgItem(hW, IDC_XA), FALSE);
+						Button_SetCheck(GetDlgItem(hW, IDC_MDEC), FALSE);
+						Button_SetCheck(GetDlgItem(hW, IDC_CDDA), FALSE);
+						Button_SetCheck(GetDlgItem(hW, IDC_RCNTFIX), FALSE);
+						Button_SetCheck(GetDlgItem(hW, IDC_VSYNCWA), FALSE);
+						Button_SetCheck(GetDlgItem(hW, IDC_WIDESCREEN), FALSE);
+						Button_SetCheck(GetDlgItem(hW, IDC_HACKFIX), FALSE);
+						Button_SetCheck(GetDlgItem(hW, IDC_MEMHACK), FALSE);
 					}
 					else {
 						EnableWindow(GetDlgItem(hW, IDC_XA), TRUE);
