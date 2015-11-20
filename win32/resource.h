@@ -153,6 +153,7 @@
 #define IDC_DEBUG                       1053
 #define IDC_GPR7                        1054
 #define IDC_LISTCDR                     1054
+#define IDC_CUSTOM1                     1054
 #define IDC_GPR8                        1055
 #define IDC_LISTBIOS                    1055
 #define IDC_GPR9                        1056
@@ -309,6 +310,9 @@
 #define IDC_HACKFIX                     1267
 #define IDC_MEMHACK                     1268
 #define IDC_NOHACK                      1269
+#define IDC_SELPSXCLOCK                 1270
+#define IDC_PSXSTOCK                    1271
+#define IDC_PSXCLOCK                    1272
 #define ID_FILE_EXIT                    40001
 #define ID_HELP_ABOUT                   40002
 #define ID_FILE_RUN_CD                  40003
@@ -363,7 +367,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        117
 #define _APS_NEXT_COMMAND_VALUE         40047
-#define _APS_NEXT_CONTROL_VALUE         1054
+#define _APS_NEXT_CONTROL_VALUE         1055
 #define _APS_NEXT_SYMED_VALUE           102
 #endif
 #endif

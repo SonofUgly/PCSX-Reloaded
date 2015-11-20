@@ -103,12 +103,12 @@ BEGIN
     GROUPBOX        "",IDC_STATIC,43,100,234,79
 END
 
-IDD_CPUCONF DIALOGEX 0, 0, 353, 184
+IDD_CPUCONF DIALOGEX 0, 0, 353, 199
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Cpu Config"
 FONT 8, "MS Sans Serif", 0, 0, 0x0
 BEGIN
-    GROUPBOX        "Misc Options",IDC_MISCOPT,7,7,130,135
+    GROUPBOX        "Misc Options",IDC_MISCOPT,7,7,130,150
     CONTROL         "Sio Irq Always Enabled",IDC_SIO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,15,86,10
     CONTROL         "Spu Irq Always Enabled",IDC_SPUIRQ,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,30,89,10
     CONTROL         "Enable Console Output",IDC_PSXOUT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,45,88,10
@@ -117,7 +117,7 @@ BEGIN
     CONTROL         "Slow Boot",IDC_SLOWBOOT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,90,46,10
     CONTROL         "Hide cursor",IDC_HIDECURSOR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,105,49,10
     CONTROL         "Save window position",IDC_SAVEWINDOWPOS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,120,83,10
-    GROUPBOX        "Hacks",IDC_MISCOPT2,140,7,205,135
+    GROUPBOX        "Hacks",IDC_MISCOPT2,140,7,205,150
     CONTROL         "Disable Xa Decoding",IDC_XA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,143,15,79,10
     CONTROL         "Disable Cd Audio",IDC_CDDA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,143,30,68,10
     CONTROL         "Black && White Movies",IDC_MDEC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,143,45,84,10
@@ -129,12 +129,14 @@ BEGIN
     CONTROL         "Compatibility hacks (Raystorm/VH-D/MML/Cart World/...)",IDC_HACKFIX,
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,143,105,195,10
     CONTROL         "Widescreen (GTE Hack)",IDC_WIDESCREEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,143,120,93,10
-    GROUPBOX        "Select Psx System Type",IDC_SELPSX,7,141,130,35
-    CONTROL         "Autodetect",IDC_PSXAUTO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,155,48,10
-    COMBOBOX        IDC_PSXTYPES,75,155,53,50,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
-    CONTROL         "Disable all hacks",IDC_NOHACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,143,155,69,10
-    DEFPUSHBUTTON   "OK",IDOK,231,162,50,14
-    PUSHBUTTON      "Cancel",IDCANCEL,291,162,50,14
+    CONTROL         "CPU Overclocking",IDC_PSXSTOCK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,143,135,93,10
+    COMBOBOX        IDC_PSXCLOCK,283,135,53,50,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Select PSX System Type",IDC_SELPSX,7,156,130,35
+    CONTROL         "Autodetect",IDC_PSXAUTO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,170,48,10
+    COMBOBOX        IDC_PSXTYPES,75,170,53,50,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Disable all hacks",IDC_NOHACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,143,170,69,10
+    DEFPUSHBUTTON   "OK",IDOK,231,177,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,291,177,50,14
 END
 
 IDD_NETPLAY DIALOG 0, 0, 165, 95
@@ -368,6 +370,17 @@ MAIN_LOGO               BITMAP                  "gui\\pcsxr.bmp"
 //
 
 1                       RT_MANIFEST             "gui\\pcsxr.exe.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_CPUCONF AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
 #endif    // English (United States) resources
 /////////////////////////////////////////////////////////////////////////////
 

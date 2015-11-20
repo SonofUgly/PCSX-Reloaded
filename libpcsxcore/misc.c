@@ -356,6 +356,32 @@ int CheckCdrom() {
 		else Config.PsxType = PSX_TYPE_NTSC; // ntsc
 	}
 
+	if (Config.PsxStock == 0) {
+		PsxClockSpeed = 33868800; // 33.8688 MHz (stock)
+	} else {
+		if (Config.PsxClock == 0) {
+			PsxClockSpeed = 16934400; // 16.9344 MHz (0.5x)
+		}
+		if (Config.PsxClock == 1) {
+			PsxClockSpeed = 25401600; // 25.4016 MHz (0.75x)
+		}
+		if (Config.PsxClock == 2) {
+			PsxClockSpeed = 50803200; // 50.8032 MHz (1.5x)
+		}
+		if (Config.PsxClock == 3) {
+			PsxClockSpeed = 67737600; // 67.7376 MHz (2x)
+		}
+		if (Config.PsxClock == 4) {
+			PsxClockSpeed = 101606400; // 101.6064 MHz (3x)
+		}
+		if (Config.PsxClock == 5) {
+			PsxClockSpeed = 135475200; // 135.4752 MHz (4x)
+		}
+		if (Config.PsxClock == 6) {
+			PsxClockSpeed = 169344000; // 169.3440 MHz (5x)
+		}
+	}
+
 	if (CdromLabel[0] == ' ') {
 		strncpy(CdromLabel, CdromId, 9);
 	}
