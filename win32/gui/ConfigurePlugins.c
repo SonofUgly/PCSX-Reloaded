@@ -364,9 +364,6 @@ void OnOK(HWND hW) {
 
 	CleanUpCombos(hW);
 
-	if (!ConfPlug) {
-		LoadPlugins();
-	}
 	EndDialog(hW,TRUE);
 }
 
@@ -610,8 +607,8 @@ BOOL CALLBACK ConfigurePluginsDlgProc(HWND hW, UINT uMsg, WPARAM wParam, LPARAM 
 					}
 					return TRUE;
 				case IDOK:     
-					OnOK(hW);     
-					return TRUE;
+					OnOK(hW);   
+                    return TRUE;
 			}
 	}
 	return FALSE;

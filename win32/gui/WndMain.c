@@ -1388,7 +1388,7 @@ BOOL CALLBACK ConfigureCpuDlgProc(HWND hW, UINT uMsg, WPARAM wParam, LPARAM lPar
 			ComboBox_SetCurSel(GetDlgItem(hW,IDC_PSXTYPES),Config.PsxType);
 
 			ComboBox_AddString(GetDlgItem(hW, IDC_PSXCLOCK), "0.5x");
-			ComboBox_AddString(GetDlgItem(hW, IDC_PSXCLOCK), "0.75");
+			ComboBox_AddString(GetDlgItem(hW, IDC_PSXCLOCK), "0.75x");
 			ComboBox_AddString(GetDlgItem(hW, IDC_PSXCLOCK), "1.5x");
 			ComboBox_AddString(GetDlgItem(hW, IDC_PSXCLOCK), "2.0x");
 			ComboBox_AddString(GetDlgItem(hW, IDC_PSXCLOCK), "3.0x");
@@ -1871,8 +1871,8 @@ void CreateMainWindow(int nCmdShow) {
 						WS_CAPTION | WS_POPUPWINDOW | WS_MINIMIZEBOX,
 						CW_USEDEFAULT,
 						0,
-						354,
-						223,
+						350,
+						219,
 						NULL,
 						NULL,
 						gApp.hInstance,
