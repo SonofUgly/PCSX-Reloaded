@@ -27,28 +27,28 @@
     <ClCompile Include="winsrc\winmain.c">
       <Filter>winsrc</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\dfsound\adsr.c">
+    <ClCompile Include="..\adsr.c">
       <Filter>dfsound</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\dfsound\dma.c">
+    <ClCompile Include="..\dma.c">
       <Filter>dfsound</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\dfsound\externals.c">
+    <ClCompile Include="..\externals.c">
       <Filter>dfsound</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\dfsound\freeze.c">
+    <ClCompile Include="..\freeze.c">
       <Filter>dfsound</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\dfsound\registers.c">
+    <ClCompile Include="..\registers.c">
       <Filter>dfsound</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\dfsound\reverb.c">
+    <ClCompile Include="..\reverb.c">
       <Filter>dfsound</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\dfsound\spu.c">
+    <ClCompile Include="..\spu.c">
       <Filter>dfsound</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\dfsound\xa.c">
+    <ClCompile Include="..\xa.c">
       <Filter>dfsound</Filter>
     </ClCompile>
   </ItemGroup>
@@ -62,40 +62,40 @@
     <ClInclude Include="winsrc\record.h">
       <Filter>winsrc</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfsound\adsr.h">
+    <ClInclude Include="..\adsr.h">
       <Filter>dfsound</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfsound\dma.h">
+    <ClInclude Include="..\dma.h">
       <Filter>dfsound</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfsound\dsoundoss.h">
+    <ClInclude Include="..\dsoundoss.h">
       <Filter>dfsound</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfsound\externals.h">
+    <ClInclude Include="..\externals.h">
       <Filter>dfsound</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfsound\gauss_i.h">
+    <ClInclude Include="..\gauss_i.h">
       <Filter>dfsound</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfsound\psemuxa.h">
+    <ClInclude Include="..\psemuxa.h">
       <Filter>dfsound</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfsound\registers.h">
+    <ClInclude Include="..\registers.h">
       <Filter>dfsound</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfsound\regs.h">
+    <ClInclude Include="..\regs.h">
       <Filter>dfsound</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfsound\reverb.h">
+    <ClInclude Include="..\reverb.h">
       <Filter>dfsound</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfsound\spu.h">
+    <ClInclude Include="..\spu.h">
       <Filter>dfsound</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfsound\stdafx.h">
+    <ClInclude Include="..\stdafx.h">
       <Filter>dfsound</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfsound\xa.h">
+    <ClInclude Include="..\xa.h">
       <Filter>dfsound</Filter>
     </ClInclude>
     <ClInclude Include="resource.h" />

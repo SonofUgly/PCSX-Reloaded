@@ -12,13 +12,13 @@
     <ClCompile Include="winsrc\winmain.c">
       <Filter>winsrc</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\bladesio1\connection.c">
+    <ClCompile Include="..\connection.c">
       <Filter>bladesio1</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\bladesio1\fifo.c">
+    <ClCompile Include="..\fifo.c">
       <Filter>bladesio1</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\bladesio1\sio1.c">
+    <ClCompile Include="..\sio1.c">
       <Filter>bladesio1</Filter>
     </ClCompile>
     <ClCompile Include="winsrc\cfg-winapi.c">
@@ -27,19 +27,19 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h" />
-    <ClInclude Include="..\..\..\plugins\bladesio1\fifo.h">
+    <ClInclude Include="..\fifo.h">
       <Filter>bladesio1</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\bladesio1\sio1.h">
+    <ClInclude Include="..\sio1.h">
       <Filter>bladesio1</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\bladesio1\connection.h">
+    <ClInclude Include="..\connection.h">
       <Filter>bladesio1</Filter>
     </ClInclude>
     <ClInclude Include="winsrc\stdafx.h">
       <Filter>winsrc</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\bladesio1\typedefs.h">
+    <ClInclude Include="..\typedefs.h">
       <Filter>bladesio1</Filter>
     </ClInclude>
     <ClInclude Include="winsrc\cfg-winapi.h">

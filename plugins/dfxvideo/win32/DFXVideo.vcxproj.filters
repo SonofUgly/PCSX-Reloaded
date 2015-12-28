@@ -33,19 +33,19 @@
     <ClCompile Include="winsrc\dxguid.c">
       <Filter>winsrc\directx</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\dfxvideo\gpu.c">
+    <ClCompile Include="..\gpu.c">
       <Filter>dfxvideo</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\dfxvideo\menu.c">
+    <ClCompile Include="..\menu.c">
       <Filter>dfxvideo</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\dfxvideo\prim.c">
+    <ClCompile Include="..\prim.c">
       <Filter>dfxvideo</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\dfxvideo\soft.c">
+    <ClCompile Include="..\soft.c">
       <Filter>dfxvideo</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\dfxvideo\zn.c">
+    <ClCompile Include="..\zn.c">
       <Filter>dfxvideo</Filter>
     </ClCompile>
   </ItemGroup>
@@ -65,43 +65,43 @@
     <ClInclude Include="winsrc\ddraw.h">
       <Filter>winsrc\directx</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfxvideo\cfg.h">
+    <ClInclude Include="..\cfg.h">
       <Filter>dfxvideo</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfxvideo\draw.h">
+    <ClInclude Include="..\draw.h">
       <Filter>dfxvideo</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfxvideo\externals.h">
+    <ClInclude Include="..\externals.h">
       <Filter>dfxvideo</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfxvideo\fps.h">
+    <ClInclude Include="..\fps.h">
       <Filter>dfxvideo</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfxvideo\gpu.h">
+    <ClInclude Include="..\gpu.h">
       <Filter>dfxvideo</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfxvideo\hq2x.h">
+    <ClInclude Include="..\hq2x.h">
       <Filter>dfxvideo</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfxvideo\hq3x.h">
+    <ClInclude Include="..\hq3x.h">
       <Filter>dfxvideo</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfxvideo\interp.h">
+    <ClInclude Include="..\interp.h">
       <Filter>dfxvideo</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfxvideo\key.h">
+    <ClInclude Include="..\key.h">
       <Filter>dfxvideo</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfxvideo\menu.h">
+    <ClInclude Include="..\menu.h">
       <Filter>dfxvideo</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfxvideo\prim.h">
+    <ClInclude Include="..\prim.h">
       <Filter>dfxvideo</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfxvideo\soft.h">
+    <ClInclude Include="..\soft.h">
       <Filter>dfxvideo</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\dfxvideo\swap.h">
+    <ClInclude Include="..\swap.h">
       <Filter>dfxvideo</Filter>
     </ClInclude>
     <ClInclude Include="resource.h" />

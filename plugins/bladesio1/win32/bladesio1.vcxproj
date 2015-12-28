@@ -63,7 +63,7 @@
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.\;.\winsrc;..\..\..\plugins\bladesio1;..\..\..\libpcsxcore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;.\winsrc;..\;..\..\..\libpcsxcore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -110,7 +110,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>.\;.\winsrc;..\..\..\plugins\bladesio1;..\..\..\libpcsxcore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;.\winsrc;..\;..\..\..\libpcsxcore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -147,9 +147,9 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\plugins\bladesio1\connection.c" />
-    <ClCompile Include="..\..\..\plugins\bladesio1\fifo.c" />
-    <ClCompile Include="..\..\..\plugins\bladesio1\sio1.c" />
+    <ClCompile Include="..\connection.c" />
+    <ClCompile Include="..\fifo.c" />
+    <ClCompile Include="..\sio1.c" />
     <ClCompile Include="winsrc\cfg-winapi.c" />
     <ClCompile Include="winsrc\winmain.c">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -159,10 +159,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\plugins\bladesio1\connection.h" />
-    <ClInclude Include="..\..\..\plugins\bladesio1\fifo.h" />
-    <ClInclude Include="..\..\..\plugins\bladesio1\sio1.h" />
-    <ClInclude Include="..\..\..\plugins\bladesio1\typedefs.h" />
+    <ClInclude Include="..\connection.h" />
+    <ClInclude Include="..\fifo.h" />
+    <ClInclude Include="..\sio1.h" />
+    <ClInclude Include="..\typedefs.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="winsrc\cfg-winapi.h" />
     <ClInclude Include="winsrc\stdafx.h" />

@@ -24,25 +24,25 @@
     <ClCompile Include="winsrc\winmain.c">
       <Filter>winsrc</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\peopsxgl\draw.c">
+    <ClCompile Include="..\draw.c">
       <Filter>peopsxgl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\peopsxgl\gpu.c">
+    <ClCompile Include="..\gpu.c">
       <Filter>peopsxgl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\peopsxgl\gte_accuracy.c">
+    <ClCompile Include="..\gte_accuracy.c">
       <Filter>peopsxgl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\peopsxgl\menu.c">
+    <ClCompile Include="..\menu.c">
       <Filter>peopsxgl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\peopsxgl\prim.c">
+    <ClCompile Include="..\prim.c">
       <Filter>peopsxgl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\peopsxgl\soft.c">
+    <ClCompile Include="..\soft.c">
       <Filter>peopsxgl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\plugins\peopsxgl\texture.c">
+    <ClCompile Include="..\texture.c">
       <Filter>peopsxgl</Filter>
     </ClCompile>
   </ItemGroup>
@@ -50,43 +50,43 @@
     <ClInclude Include="winsrc\ssave.h">
       <Filter>winsrc</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\peopsxgl\cfg.h">
+    <ClInclude Include="..\cfg.h">
       <Filter>peopsxgl</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\peopsxgl\draw.h">
+    <ClInclude Include="..\draw.h">
       <Filter>peopsxgl</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\peopsxgl\externals.h">
+    <ClInclude Include="..\externals.h">
       <Filter>peopsxgl</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\peopsxgl\fps.h">
+    <ClInclude Include="..\fps.h">
       <Filter>peopsxgl</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\peopsxgl\gl_ext.h">
+    <ClInclude Include="..\gl_ext.h">
       <Filter>peopsxgl</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\peopsxgl\gpu.h">
+    <ClInclude Include="..\gpu.h">
       <Filter>peopsxgl</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\peopsxgl\gte_accuracy.h">
+    <ClInclude Include="..\gte_accuracy.h">
       <Filter>peopsxgl</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\peopsxgl\key.h">
+    <ClInclude Include="..\key.h">
       <Filter>peopsxgl</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\peopsxgl\menu.h">
+    <ClInclude Include="..\menu.h">
       <Filter>peopsxgl</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\peopsxgl\prim.h">
+    <ClInclude Include="..\prim.h">
       <Filter>peopsxgl</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\peopsxgl\soft.h">
+    <ClInclude Include="..\soft.h">
       <Filter>peopsxgl</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\peopsxgl\stdafx.h">
+    <ClInclude Include="..\stdafx.h">
       <Filter>peopsxgl</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\plugins\peopsxgl\texture.h">
+    <ClInclude Include="..\texture.h">
       <Filter>peopsxgl</Filter>
     </ClInclude>
     <ClInclude Include="resource.h" />
